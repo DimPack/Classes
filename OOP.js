@@ -199,10 +199,10 @@ class MagicSquirrel extends FlySquirrel {
         if (Array.isArray(value) === false) {
             throw new TypeError('name must be number');
         }
-        this._worlds = value.join(' ');
+        this._worlds = value;
     }
     say() {
-        return 'I am a magic squirrel';
+        return this._worlds.join(' ');
     }
 }
 try {
